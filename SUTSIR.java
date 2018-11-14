@@ -54,7 +54,8 @@ public class SUTSIR {
         else {
             if (x > y)
                 m = y;
-            else if (x < z) // the incorrect statement is  x >= z is unreachable
+            else if (x < z) // the correct statement is x > z
+            // the seeded error x >= z is unreachable
                 m = x;
         }
         // assertions below added to express correctness -- see
