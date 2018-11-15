@@ -36,7 +36,7 @@ public class SUTSIR {
         assert y < x && x < z ? m == x : true ;   // #7
         assert z < x && x < y ? m == x : true ;   // #8
 
-        Thread.sleep(time);
+        // Thread.sleep(time);
         // used for test execution time
         
         return m;
@@ -70,7 +70,7 @@ public class SUTSIR {
         assert y < x && x < z ? m == x : true ;   // #7
         assert z < x && x < y ? m == x : true ;   // #8
 
-        Thread.sleep(time);
+        // Thread.sleep(time);
         // used for test execution time
         
         return m;
