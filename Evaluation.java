@@ -1,8 +1,8 @@
-package softwareTesting;
 /**
  *
  * @author Everton
  */
+package softwareTesting;
 
 public class Evaluation {
     

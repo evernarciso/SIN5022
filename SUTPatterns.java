@@ -16,7 +16,7 @@ public class SUTPatterns {
         else
             z = 100;
         
-        Thread.sleep(time);
+        // Thread.sleep(time);
         // used for test execution time
         return z;
     }
@@ -30,7 +30,7 @@ public class SUTPatterns {
         else
             z = 100;
         
-        Thread.sleep(time);
+        // Thread.sleep(time);
         // used for test execution time
         return z;
     }
@@ -44,7 +44,7 @@ public class SUTPatterns {
         else
             z = 100;
         
-        Thread.sleep(time);
+        // Thread.sleep(time);
         // used for test execution time
         return z;
     }
@@ -58,7 +58,7 @@ public class SUTPatterns {
         else
             z = 100;
         
-        Thread.sleep(time);
+        // Thread.sleep(time);
         // used for test execution time
         return z;
     }

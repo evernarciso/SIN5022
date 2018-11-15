@@ -1,8 +1,8 @@
-package softwareTesting;
 /**
  *
  * @author Everton
  */
+package softwareTesting;
 
 import java.util.LinkedList;
 import java.util.concurrent.ThreadLocalRandom;

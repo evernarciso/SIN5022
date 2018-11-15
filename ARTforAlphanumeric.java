@@ -1,7 +1,6 @@
 /**
  * @author Everton
  */
-
 package softwareTesting;
 
 import java.util.LinkedList;

@@ -1,9 +1,9 @@
-package softwareTesting;
-
 /**
  *
  * @author Everton
  */
+package softwareTesting;
+
 public class SUTSIR {
     
     static int time = 1000; // miliseconds
