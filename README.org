@@ -1,0 +1,90 @@
+* RESUMO E APRESENTAÇÃO DO PROJETO
+  Projeto elaborado para disciplina disciplina de Teste de Software
+  SIN5022, EACH-USP, set/2018. O Tema do trabalho é Priorização e
+  Seleção de Casos de Testes.
+
+  O projeto apresenta a implementação da abordagem conhecida como adaptive
+  random testing (ART), utilizada para seleção e priorização de casos
+  de testes.
+  Para tanto, este projeto fornece códigos para execução de
+  experimentos para seleção e minimização de casos de testes bem como
+  execução dos desses casos de testes. A execução fornece dados para
+  as análises que demonstram a eficiência e a eficácia dos testes ART em comparação com testes aleatórios.
+  
+
+* COMO REPRODUZIR O EXPERIMENTO
+  Este repositório não traz o projeto java, mas apenas as classes.
+  Portanto, utilizando qualquer IDE é possível criar um projeto java,
+  um pacote chamado softwareTesting e colar as classes dentro desse
+  pacote. Depois disso basta rodar as classes: 
+  + TestBlockPattern.java
+  + TestSUTSIR.java 
+  + TestStripPattern.java
+
+** Reproduzindo o experimento sem IDE
+   Apenas com o java e o git instalado na máquina dá pra reproduzir o experimento da seguinte maneira:
+
+*** Passo1: Clonar o repositório
+   Para clonar o repositório use o seguinte comando
+   Se o seu comando git não funcionar você tem que instalar ele. Se
+   for o caso consulte esse link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+   Com o git instalado, rode o seguinte comando
+
+   Abre o seu terminal de comando ou do windows ou do linux...
+   Mude para o diretório onde vc vai clonar o clonar o repositório e
+   faça a operação com o seguinte comandos
+   #+NAME git clone
+   #+BEGIN_SRC shell :exports both :results output
+   cd /home/wagner/projetos
+   git clone https://github.com/evernarciso/SIN5022.git
+   #+END_SRC
+
+*** Compilando as classes java   
+   Para rodar o projeto é necessário primeiro compilar as classes java
+   Para isso você vai entrar no diretório do projeto clonado e
+   utilizar o comando javac conforme abaixo
+
+   Para testar se o seu java está instalado, rode o seguinte
+   comando...
+   
+   #+NAME: java -version
+   #+BEGIN_SRC shell :results list :exports both 
+   [wagner@Unknown SIN5022]$ java -version
+   java version "1.8.0_161"
+   Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
+   Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
+   [wagner@Unknown SIN5022]$ javac -version
+   javac 1.8.0_161
+   [wagner@Unknown SIN5022]$ 
+   #+END_SRC
+
+   #+NAME javac
+   #+BEGIN_SRC shell :results list :exports both 
+   cd /home/wagner/projetos/SIN5022
+   javac softwareTesting/*.java
+   ls -l softwareTesting/*.class
+   #+END_SRC
+
+   #+RESULTS:
+   - ("-rw-rw-r--" 1 "wagner" "wagner" 3034 "out" 12 "19:38" "softwareTesting/ART.class")
+   - ("-rw-rw-r--" 1 "wagner" "wagner" 1916 "out" 12 "19:38" "softwareTesting/DistanceFunctions.class")
+   - ("-rw-rw-r--" 1 "wagner" "wagner" 2639 "out" 12 "19:38" "softwareTesting/Genetic.class")
+   - ("-rw-rw-r--" 1 "wagner" "wagner" 1630 "out" 12 "19:38" "softwareTesting/MainSoftwareTesting.class")
+   - ("-rw-rw-r--" 1 "wagner" "wagner" 1050 "out" 12 "19:38" "softwareTesting/Random.class")
+   - ("-rw-rw-r--" 1 "wagner" "wagner" 2425 "out" 12 "19:38" "softwareTesting/SUTPwd.class")
+
+   Perceba que os arquivos byte codes foram gerados com extesão .class
+
+
+
+** Rodando o projeto
+   Agora pode executar o projeto
+
+   #+BEGIN_SRC sh :exports both 
+   cd /home/wagner/projetos/SIN5022/
+   java  -cp . softwareTesting.MainSoftwareTestings
+   #+END_SRC
+   
+* Referencias
+  [fn:chanEtAll]https://www.sciencedirect.com/science/article/abs/pii/0950584996011032
+
