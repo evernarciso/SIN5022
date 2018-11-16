@@ -36,8 +36,10 @@
    #+NAME git clone
    #+BEGIN_SRC shell :exports both :results output
    cd /home/wagner/projetos
-   git clone https://github.com/evernarciso/SIN5022.git
+   git clone -b docs https://github.com/evernarciso/SIN5022.git
    #+END_SRC
+
+   #+RESULTS:
 
 *** Compilando as classes java   
    Para rodar o projeto é necessário primeiro compilar as classes java
@@ -62,29 +64,45 @@
    #+BEGIN_SRC shell :results list :exports both 
    cd /home/wagner/projetos/SIN5022
    javac softwareTesting/*.java
-   ls -l softwareTesting/*.class
+   ls softwareTesting/*.class
    #+END_SRC
 
    #+RESULTS:
-   - ("-rw-rw-r--" 1 "wagner" "wagner" 3034 "out" 12 "19:38" "softwareTesting/ART.class")
-   - ("-rw-rw-r--" 1 "wagner" "wagner" 1916 "out" 12 "19:38" "softwareTesting/DistanceFunctions.class")
-   - ("-rw-rw-r--" 1 "wagner" "wagner" 2639 "out" 12 "19:38" "softwareTesting/Genetic.class")
-   - ("-rw-rw-r--" 1 "wagner" "wagner" 1630 "out" 12 "19:38" "softwareTesting/MainSoftwareTesting.class")
-   - ("-rw-rw-r--" 1 "wagner" "wagner" 1050 "out" 12 "19:38" "softwareTesting/Random.class")
-   - ("-rw-rw-r--" 1 "wagner" "wagner" 2425 "out" 12 "19:38" "softwareTesting/SUTPwd.class")
+   - ("softwareTesting/ARTforAlphanumeric.class")
+   - ("softwareTesting/ARTforDouble.class")
+   - ("softwareTesting/ARTforInteger.class")
+   - ("softwareTesting/DistanceFunctions.class")
+   - ("softwareTesting/Evaluation.class")
+   - ("softwareTesting/RandomAlphanumericGen.class")
+   - ("softwareTesting/SUTPatterns.class")
+   - ("softwareTesting/SUTSIR.class")
+   - ("softwareTesting/TestBlockPattern.class")
+   - ("softwareTesting/TesteJaccard.class")
+   - ("softwareTesting/TestStripPattern.class")
+   - ("softwareTesting/TestSUTSIR.class")
 
-   Perceba que os arquivos byte codes foram gerados com extesão .class
+   A saída deste comando são as classes compiladas abaixo.. que são
+   geradas no diretório softwareTesting
 
+*** Executando o experimento
+   Conforme explicado anteriormente, pra reproduzir o experimento
+   basta rodar as três classes que contém o método main
+   
+   + TestBlockPattern.java
+   + TestStripPattern.java
+   + TestSUTSIR.java 
 
-
-** Rodando o projeto
-   Agora pode executar o projeto
-
+   #+NAME:  java  -cp . softwareTesting.TestSUTSIR
    #+BEGIN_SRC sh :exports both 
    cd /home/wagner/projetos/SIN5022/
-   java  -cp . softwareTesting.MainSoftwareTestings
+   java  -cp . softwareTesting.TestSUTSIR
+   java  -cp . softwareTesting.TestBlockPattern
+   java  -cp . softwareTesting.TestStripPattern   
    #+END_SRC
-   
+
+
+
 * Referencias
   [fn:chanEtAll]https://www.sciencedirect.com/science/article/abs/pii/0950584996011032
-
+  
+  
